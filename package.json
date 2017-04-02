@@ -1,0 +1,25 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "LIRI is a command line app for nodejs that will take parameters and give back data",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carltonhurdle/liri-node-app.git"
+  },
+  "keywords": [
+    "liri",
+    "week10",
+    "nodejs",
+    "assignment"
+  ],
+  "author": "Carlton Hurdle Jr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carltonhurdle/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/carltonhurdle/liri-node-app#readme"
+}
