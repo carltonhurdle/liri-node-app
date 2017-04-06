@@ -75,7 +75,7 @@ var GetMeSpotify = function(songName) {
 });
 }
 
-
+//function for OMDB
 var GetMeMovie = function(movieName) {
 	request('http://www.omdbapi.com/?t=' + movieName + '&y=&plot=short&r=json', function (error, response, body){
 		if(!error && response.statusCode == 200) {
@@ -96,7 +96,7 @@ var GetMeMovie = function(movieName) {
 	});
 }
 
-
+//function for FS
 var doWhatItSays = function(){
 	fs.readFile('random.txt', 'utf8', function(err, data){
 		if (err) throw err;
