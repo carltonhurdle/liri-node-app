@@ -51,12 +51,14 @@ var GetMyTweets = function() {
 	    });
 }
 
-
+//function for Spotify
 var GetArtistNames = function(artist) {
 	return artist.name;
 }
 var GetMeSpotify = function(songName) {
-spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function(err, data) {
+//spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function(err, data) {
+  spotify.search({ type: 'track', query: songName }, function(err, data) {
+
     if ( err ) {
         console.log('Error occurred: ' + err);
         return;
@@ -73,28 +75,6 @@ spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function(er
 });
 }
 
-/*
-//function for Spotify---------------------
-//var songSpotify = function(spotifyThisSong) {
-//If statement for Spotify
-if (inputA == "spotify-this-song"){
-    console.log(spotify);
-    spotify.search({ type: 'track', query: inputB }, function(err, data) {
-        if ( err ) {
-            console.log('Error occurred: ' + err);
-            return;
-            default: 
-         }
-        for (var i = 0; i < data.tracks.items.length; i++){
-          console.log("Song Name: " + data.tracks.items[i].name);
-          console.log("Song Short URL: " + data.tracks.items[i].album.uri);
-          console.log("Song Album Name: " + data.tracks.items[i].alubm.name);
-        }
-            console.log(data.tracks.items[0]); 
-    });
- }
-//}--------------------------------
-*/
 
 var GetMeMovie = function(movieName) {
 	request('http://www.omdbapi.com/?t=' + movieName + '&y=&plot=short&r=json', function (error, response, body){
@@ -131,23 +111,6 @@ var doWhatItSays = function(){
 	});
 }
 
-/*
-//If statement for OMDB
-  if (inputA == "movie-this") {
-    request
-  .get(inputB.title.)
-  .on('response', function(response) {
-    console.log(this.response.statusCode) 
-  })
-      if ( err ) {
-        console.log('Error occurred: ' + err);
-        return;
-    }
-}
-*/
-
-
-//If statement for FS
 
 //switch statement for liribot
 var pick = function(caseData, functionData) {
